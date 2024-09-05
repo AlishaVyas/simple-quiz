@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>simple quiz</title>
+    <style>
+        .wrapper {
+            font-size:x-large;
+            width:80%;
+            
+            color: rgb(38, 3, 65);
+            backdrop-filter: blur(2px);
+        }
+        .wrapper h3{
+            font-size: xx-large;
+            display: flex;
+            justify-content: center;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+
+        }
+        .q{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+  
+    </style>
+</head>
+<body background="./Quiz background ans seamless.jpeg">
+    <div class="wrapper">
+        <h3> Simple Quiz</h3>
+        <div >
+
+            Who betrayed Jesus to the religious leaders?<br>
+
+            <input type="radio" name="q1">Peter<br>
+            <input type="radio" name="q1" id="correct1">Judas Iscariot <br>
+            <input type="radio" name="q1">John<br>
+
+<br>  
+            During the Last Supper, what did Jesus say the bread and wine represented?<br>
+            <input type="radio" name="q2">His teachings and miracles<br>
+            <input type="radio" name="q2" id="correct2">His body and blood<br>
+            <input type="radio" name="q2">His love and wisdom<br>
+<br>
+            What was written on the sign above Jesus on the cross?<br>
+            <input type="radio" name="q3" id="correct3">"King of the Jews"<br>
+            <input type="radio" name="q3">"Son of God"<br>
+            <input type="radio" name="q3">"Messiah<br>
+<br>
+            Who was released by Pilate instead of Jesus?<br>
+            <input type="radio" name="q4" id="correct4">Barabbas<br>
+            <input type="radio" name="q4" >Herod<br>
+            <input type="radio" name="q4" >Simon of Cyrene<br>
+<br>
+        <div class="sub">
+            <input type="submit" value="Submit" onclick="result()">
+        </div>
+
+        </div>
+    </div>
+
+<script type="text/javascript">
+    function result(){
+        var score = 0;
+        if (document.getElementById('correct1').checked){
+            score+=10;
+        }
+        if (document.getElementById('correct2').checked){
+            score+=10;
+        }
+        if (document.getElementById('correct3').checked){
+            score+=10;
+        }
+        if (document.getElementById('correct4').checked){
+            score+=10;
+        }
+        alert("your score is:" + score);
+    }
+</script>    
+</body>
+</html>
